@@ -1,15 +1,10 @@
+import ImageCard from "./ImageCard";
 import "./imageList.css";
 const ImageList = ({ images }) => {
   return (
     <div className="image-list">
       {images.map((image) => {
-        return (
-          <img
-            alt={image.description}
-            key={image.id}
-            src={image.urls.regular}
-          />
-        );
+        return <ImageCard key={image.id} image={image} />;
       })}
     </div>
   );
